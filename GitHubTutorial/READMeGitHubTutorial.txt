@@ -3,7 +3,7 @@ This folder is meant to teach both Git and GitHub to the people inside Programmi
 Here we will cover topics about how to use them, as well text editors and version control as well as collaboration!
 
 Kevin is Gay
-Grant Jacks off To Jack Daneils
+Grant Jacks is Jack Daneils
 Im about to turb this 12th pack of budwiser into domestic violence
 
 Doctor - you have 10 to live
