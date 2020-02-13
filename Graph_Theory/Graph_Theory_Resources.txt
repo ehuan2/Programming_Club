@@ -1,0 +1,25 @@
+Graph Theory :
+https://www.baeldung.com/java-binary-tree // start with binary trees, this is an excellent resource, starts off with a general tree and show both DFS and BFS
+https://www.geeksforgeeks.org/mathematics-graph-theory-basics-set-1/ // good intro, don’t need to get too deep into this one
+https://www.hackerearth.com/practice/algorithms/graphs/graph-representation/tutorial/ // good one to go through all of graph theory (has some examples of representation here
+Side notes : 
+Graph representations can be done through a lot of ways, Matrix (2D arrays), A collection of edges, a collection of nodes and their subsequent edges, etc. Each has their own pros and cons
+I started with binary trees, easiest to understand
+When using your own objects, make sure to override the .equals() and the .hashCode() !!!
+
+BFS and DFS videos :
+ https://www.youtube.com/watch?v=zaBhtODEL0w&feature=youtu.be // the one I used, pretty good
+
+
+SPFA (Shortest path first algorithm) :
+Weighted graphs, each algorithm has their pros and cons
+https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/
+3 algorithms : Start with Dijkstra’s - Closest to BFS
+Then from Dijkstra’s - search up A-star
+https://www.youtube.com/watch?v=GazC3A4OQTE // Computerphile, how I learned it (Dijkstra)
+https://www.youtube.com/watch?v=ySN5Wnu88nE 
+This is A-star, an extension of Dijkstra’s
+
+Disjoint Sets :
+Learn it from the HackerEarth website (not in Java, but still have the same idea) 
+ 
