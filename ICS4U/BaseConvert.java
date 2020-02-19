@@ -22,9 +22,9 @@ public class BaseConvert {
   public static int valueOfChar(char in){
     String hex = "ABCDEF";
    
-    int in = hex.indexOf(in);
+    int index = hex.indexOf(in);
     
-    return in == -1 ? Integer.parseInt(in + "") : in + 10;
+    return index == -1 ? Integer.parseInt(in + "") : index + 10;
     
   }
   
@@ -32,16 +32,16 @@ public class BaseConvert {
    
     int out = 0;
     
-    for(int i = 0; i < value.length; i++){
-       out += Math.pow(base, i) * valueOfChar(value.charAt(i));
-      
+    for(int i = 0; i < value.length(); i++){
+       out += Math.pow(base, i) * valueOfChar(value.charAt(value.length()-i-1));
     }
-    
+    return out;
   }
   
   public static void main(String[]args){
-     
-     System.out.println(decToBase(16,8));
+    System.out.println(decToBase(16,8));
+    
+    System.out.println(baseToDec("1A", 16));
 
    }
 
