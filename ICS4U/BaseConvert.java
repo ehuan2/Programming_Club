@@ -12,8 +12,8 @@ public class BaseConvert {
     if(value < base){
      return valueToString(value); 
     }
-    
-    return valueToString(value/base) + decToBase(value % base, base);
+ 
+    return decToBase(value/base, base) + valueToString(value%base);
     
   }
   
@@ -43,9 +43,10 @@ public class BaseConvert {
   }
   
   public static void main(String[]args){
-    System.out.println(decToBase(16,8));
+    System.out.println(decToBase(16,2));
     
     System.out.println(baseToDec("1A", 16));
+    System.out.println(baseToBase("1A", 16, 2));
 
    }
 
