@@ -42,6 +42,45 @@ public class BaseConvert {
    return decToBase(baseToDec(value, baseOne), baseTwo); 
   }
   
+  public static String addBaseNumbers(String a, String b, int base){
+    
+    int[]one = new int[a.length()];
+    
+    int[] two = new int[b.length()];
+    
+    for(int i = 0; i < a.length(); i++){
+      one[i] = valueOfChar(a.charAt(a.length()-i-1);
+    }
+    
+    for(int i = 0; i < b.length(); i++){
+      two[i] = valueOfChar(b.charAt(b.length()-i-1));
+    }
+    
+    int[]out = new int[Integer.max(a.length(), b.length())];
+    
+    int carry = 0;
+    
+    for(int i = 0; i < Integer.max(a.length(), b.length()); i++){
+      int sum = one[i] + two[i] + carry;
+      out[i] = sum % base;
+      carry = sum / base;
+    
+      if(carry > 0 && i == out.length-1){
+        out = Arrays.copyOf(out, out.length+1);
+        out[out.length-1] = carry;
+      }
+    }
+    
+    String strOut = "";
+                           
+    for(int i = out.length-1; i >= 0; i--){
+      strOut += out[i];
+    }
+        
+                           
+                           return strOut;
+  }
+  
   public static void main(String[]args){
     System.out.println(decToBase(16,2));
     
