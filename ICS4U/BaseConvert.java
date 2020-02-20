@@ -38,6 +38,10 @@ public class BaseConvert {
     return out;
   }
   
+  public static String baseToBase(String value, int baseOne, int baseTwo){
+   return decToBase(baseToDec(value, baseOne), baseTwo); 
+  }
+  
   public static void main(String[]args){
     System.out.println(decToBase(16,8));
     
