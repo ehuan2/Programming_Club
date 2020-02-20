@@ -1,3 +1,6 @@
+ 
+import java.util.*;
+ 
 public class BaseConvert {
 
   public static String valueToString(int value){
@@ -49,7 +52,7 @@ public class BaseConvert {
     int[] two = new int[b.length()];
     
     for(int i = 0; i < a.length(); i++){
-      one[i] = valueOfChar(a.charAt(a.length()-i-1);
+      one[i] = valueOfChar(a.charAt(a.length()-i-1));
     }
     
     for(int i = 0; i < b.length(); i++){
@@ -61,7 +64,9 @@ public class BaseConvert {
     int carry = 0;
     
     for(int i = 0; i < Integer.max(a.length(), b.length()); i++){
-      int sum = one[i] + two[i] + carry;
+     
+     
+      int sum = (i < one.length ? one[i] : 0) + (i < two.length ? two[i] : 0) + carry;
       out[i] = sum % base;
       carry = sum / base;
     
@@ -74,11 +79,11 @@ public class BaseConvert {
     String strOut = "";
                            
     for(int i = out.length-1; i >= 0; i--){
-      strOut += out[i];
+      strOut += valueToString(out[i]);
     }
         
                            
-                           return strOut;
+    return strOut;
   }
   
   public static void main(String[]args){
@@ -86,7 +91,10 @@ public class BaseConvert {
     
     System.out.println(baseToDec("1A", 16));
     System.out.println(baseToBase("1A", 16, 2));
-
+        
+        
+    System.out.println(addBaseNumbers("1", "FFFF", 16));
+        
    }
 
 
