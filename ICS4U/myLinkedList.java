@@ -48,15 +48,33 @@ public class myLinkedList {
      newNode.next = this.head;
     }
     
-    Node n = head;
+    Node nodeIn = head;
     
     for(int i = 1; i < pos; i++){
-      n = n.next;
+      nodeIn = nodeIn.next;
     }
     
-    newNode.next = n.next;
-    n.next = newNode;
+    newNode.next = nodeIn.next;
+    nodeIn.next = newNode;
     this.size++;
+    
+  }
+  
+  public void recurAddNode(int value, int pos, Node next){
+    
+    if(pos == 0){
+      Node a = new Node(value, next);
+      this.size++;
+      return;
+    }
+    
+    if(pos == 1){
+      Node a = new Node(value, next.next);
+      next.next = a;
+      this.size++;
+    }
+    
+    recurAddNode(value, pos-1, next.next);
     
   }
   
