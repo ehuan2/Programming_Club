@@ -78,4 +78,29 @@ public class myLinkedList {
     
   }
   
+  public int removeNode(int pos){
+   
+    if(pos >= this.size){
+      return -1;
+    }
+    
+    if(i == 0){
+      int out = this.head.value;
+      this.head = this.head.next;
+      this.size--;
+      return out;
+    }
+    
+    Node next = head;
+    
+    for(int i = 1; i < pos; i++){
+      next = next.next;
+    }
+    
+    int out = next.next;
+    next.next = next.next.next;
+    this.size--;
+    return out;
+  }
+  
 }
